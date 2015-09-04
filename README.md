@@ -10,4 +10,5 @@ Configuration for my raspbmc set up
 - cd to level containing all artists.
 - Transfer to pi with `scp -r . pi@X.X.X.X:/home/pi/cd_rips/`
 - ssh into pi
+- Launch a [tmux](http://www.sitepoint.com/tmux-a-simple-start/) session: 
 - Run rips_to_folders.pl
