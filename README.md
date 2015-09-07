@@ -1,6 +1,11 @@
 # raspbmc
 Configuration for my raspbmc set up
 
+## Setup
+
+- Clone this repo on to the pi
+- Run setup.sh
+
 ## Transfering from Mac
 
 - Rip files to iTunes with Apple Lossless to create .m4a files
@@ -10,5 +15,5 @@ Configuration for my raspbmc set up
 - cd to level containing all artists.
 - Transfer to pi with `scp -r . pi@X.X.X.X:/home/pi/cd_rips/`
 - ssh into pi
-- Launch a [tmux](http://www.sitepoint.com/tmux-a-simple-start/) session: 
+- Launch a [tmux](http://www.sitepoint.com/tmux-a-simple-start/) session:
 - Run rips_to_folders.pl
