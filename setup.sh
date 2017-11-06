@@ -3,7 +3,8 @@
 apt-get update && apt-get install -qy \
   ffmpeg \
   tmux \
-  vim
+  vim \
+  youtube-dl
 
 mkdir $HOME/cd_rips
 

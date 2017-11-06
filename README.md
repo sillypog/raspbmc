@@ -1,8 +1,14 @@
-# raspbmc
-Configuration for my raspbmc set up
+# Raspbian
+Configuration for my raspbian set up
 
 ## Setup
-
+- Enable ssh on headless raspbian by touching a file called `ssh` to the card before turning on the pi.
+- Get the network subnet with `ifconfig` on Mac.
+- Get the IP address of the pi:
+	`nmap -sn 192.168.1.0/24`
+- ssh into the pi.
+- Install git:
+	`sudo apt-get update && apt-get install git`
 - Clone this repo on to the pi
 - Run setup.sh
 
