@@ -2,6 +2,9 @@
 
 apt-get update && apt-get install -qy \
   ffmpeg \
+  fuse \
+  lsof \
+  ntfs-3g \
   tmux \
   vim \
   youtube-dl

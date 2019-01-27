@@ -9,8 +9,24 @@ Configuration for my raspbian set up
 - ssh into the pi.
 - Install git:
 	`sudo apt-get update && apt-get install git`
+- Create a new rsa key on the pi:
+	`ssh-keygen -t rsa -b 4096 -C "email@address.com"`
+- Add id_rsa.pub to the Github account.
 - Clone this repo on to the pi
-- Run setup.sh
+- Checkout the raspbian branch.
+	`cd raspbmc && git checkout raspbian`
+- Run `sudo ./setup.sh`
+
+### Mount External drive.
+Get the drive location, eg `/dev/sda5` and mount that to a folder.
+When disconnecting, run `lsof` to confirm nothing is using that drive before unmounting.
+```
+sudo blkid
+sudo mkdir /media/data
+sudo mount -t ntfs-3g /dev/sda5 /media/data/
+lsof /media/data
+sudo umount /media/data
+```
 
 ## Transfering from Mac
 
@@ -23,3 +39,17 @@ Configuration for my raspbian set up
 - ssh into pi
 - Launch a [tmux](http://www.sitepoint.com/tmux-a-simple-start/) session:
 - Run rips_to_folders.pl
+
+## Transfering to Mac
+
+- On mac, run scp in quotes to handle spaces in filenames:
+  `scp 'pi@X.X.X.X:"/home/pi/original with spaces.mp3"' copy.mp3`
+
+## Downloading from Youtube
+
+- https://github.com/rg3/youtube-dl
+- `youtube-dl -x --audio-format mp3 https://www.youtube.com/watch?v=XXX`
+
+## Restart
+
+`sudo shutdown -r now`
